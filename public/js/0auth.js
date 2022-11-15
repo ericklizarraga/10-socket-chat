@@ -5,7 +5,7 @@ const miformulario = document.querySelector('form');
 
 var url = (window.location.hostname.includes('localhost'))
   ? 'http://localhost:8080/api/auth/'
-  : 'https://restserver-curso-fher.herokuapp.com/api/auth/';
+  : 'https://10-socket-chat-production.up.railway.app/api/auth/';
 
 
 

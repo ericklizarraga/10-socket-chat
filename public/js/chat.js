@@ -10,6 +10,11 @@ const ulUsuarios = document.querySelector('#ulUsuarios');
 const ulMensajes = document.querySelector('#ulMensajes');
 const btnSalir = document.querySelector('#btnSalir');
 
+var url = (window.location.hostname.includes('localhost'))
+  ? 'http://localhost:8080/api/auth/'
+  : 'https://10-socket-chat-production.up.railway.app/api/auth/';
+  
+
 const validarJWT = async () => {
 
     const token = localStorage.getItem('token') || '';
