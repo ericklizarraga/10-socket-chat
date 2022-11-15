@@ -52,7 +52,7 @@ function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
   const data = { id_token };
 
-  fetch('http://localhost:8080/api/auth/google', {
+  fetch( url+'google', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)

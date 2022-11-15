@@ -13,7 +13,7 @@ const btnSalir = document.querySelector('#btnSalir');
 var url = (window.location.hostname.includes('localhost'))
   ? 'http://localhost:8080/api/auth/'
   : 'https://10-socket-chat-production.up.railway.app/api/auth/';
-  
+
 
 const validarJWT = async () => {
 
@@ -24,7 +24,7 @@ const validarJWT = async () => {
         throw new Error('no hay token en el server');
     }
 
-    const respu = await fetch('http://localhost:8080/api/auth/', {
+    const respu = await fetch( url , {
         headers: {
             'x-token': token
         }
